@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConvnetShartStrategy
+namespace ConvnetSharpStrategy
 {
     [Serializable]
     public class QAgent21

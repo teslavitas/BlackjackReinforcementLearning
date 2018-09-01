@@ -11,7 +11,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConvnetShartStrategy
+namespace ConvnetSharpStrategy
 {
     public class StrategyBuilder
     {
@@ -63,12 +63,12 @@ namespace ConvnetShartStrategy
             int accumulatedScore = 0;
             int accumulatedGameLenght = 0;
             int gamesInAccumulatedScore = 0;
-            int batchSize = 15000;
+            int batchSize = 5000;
             int total = 0;
             Stream bestAgentSerialized = new MemoryStream();
             double bestBatchScore = double.MinValue;
 
-            while (total < 1000000)
+            while (total < 50000)
             {
                 GameState state = new GameState();
 

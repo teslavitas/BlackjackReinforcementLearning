@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ConvnetSharpStrategy")]
+[assembly: AssemblyTitle("DeepQLearningCore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConvnetSharpStrategy")]
+[assembly: AssemblyProduct("DeepQLearningCore")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("46019517-8916-4afa-aa3c-8b73b94a1ff6")]
+[assembly: Guid("cf90c23c-730c-4aaf-8391-f28cae265bf2")]
 
 // Version information for an assembly consists of the following four values:
 //

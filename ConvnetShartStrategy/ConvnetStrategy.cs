@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Engine21;
 
-namespace ConvnetShartStrategy
+namespace ConvnetSharpStrategy
 {
     [Serializable]
     public class ConvnetStrategy : IStrategy21

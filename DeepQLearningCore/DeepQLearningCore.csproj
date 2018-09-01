@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B43A0F6-7B5A-4BC9-900B-C664B648077D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{CF90C23C-730C-4AAF-8391-F28CAE265BF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_21</RootNamespace>
-    <AssemblyName>21</AssemblyName>
+    <RootNamespace>DeepQLearningCore</RootNamespace>
+    <AssemblyName>DeepQLearningCore</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,25 +44,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ConvnetSharp\Gradient.cs" />
+    <Compile Include="ConvnetSharp\Layers\ConvLayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\DropoutLayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\FullyConnectedLayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\InputLayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\Layer.cs" />
+    <Compile Include="ConvnetSharp\Layers\LayerDefinition.cs" />
+    <Compile Include="ConvnetSharp\Layers\RegressionLayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\ReLULayer.cs" />
+    <Compile Include="ConvnetSharp\Layers\SVMLayer.cs" />
+    <Compile Include="ConvnetSharp\Net.cs" />
+    <Compile Include="ConvnetSharp\Trainer\Options.cs" />
+    <Compile Include="ConvnetSharp\Trainer\Trainer.cs" />
+    <Compile Include="ConvnetSharp\Trainer\TrainingOptions.cs" />
+    <Compile Include="ConvnetSharp\Util.cs" />
+    <Compile Include="ConvnetSharp\Volume.cs" />
+    <Compile Include="DRLAgent\DeepQLearn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConvnetShartStrategy\ConvnetSharpStrategy.csproj">
-      <Project>{46019517-8916-4afa-aa3c-8b73b94a1ff6}</Project>
-      <Name>ConvnetSharpStrategy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Engine21\Engine21.csproj">
-      <Project>{24ea1b5c-1a32-4540-a804-0ba354437153}</Project>
-      <Name>Engine21</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Strategies21\Strategies21.csproj">
-      <Project>{b45c663f-b22f-47fe-b255-cc07727bbbf2}</Project>
-      <Name>Strategies21</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

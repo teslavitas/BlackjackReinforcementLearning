@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Engine21;
 using Strategies21;
-using ConvnetShartStrategy;
+using ConvnetSharpStrategy;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -39,7 +39,7 @@ namespace _21
             //    fs.Close();
             //}
 
-            int gamesCount = 500000;
+            int gamesCount = 50000;
             List<int> gameResults = new List<int>();
 
             for (int i = 0; i < gamesCount; ++i)
